@@ -21,8 +21,9 @@ FONT_STYLE = 'Courier New'
 class GuiWindow(tk.Frame):
     '''Build and display entire GUI'''
     def __init__(self, master):
-        tk.Frame.__init__(self, master)
-        
+        self.master = master
+        tk.Canvas.__init__(self, master, height=700, width=1000)
+                
         # Background image
         self.bg_file = 'geometree.png'
         self.bg_img = tk.PhotoImage(file=self.bg_file)
@@ -144,7 +145,7 @@ class GuiWindow(tk.Frame):
         self.frame_results.place(relx=.41, rely=.85)
 
         # Label: Heading/Title
-        self.text7 = "File Trafile_xfer_gui.pynsfer Time: FIX ME"
+        self.text7 = "File Transfer Time Estimation:"
         self.label_results = tk.Label(self.frame_results, text=self.text7,
                         bg=BG_COLOR, fg=FG_COLOR, font=(FONT_STYLE, 18)
                         ).pack(side='top')
