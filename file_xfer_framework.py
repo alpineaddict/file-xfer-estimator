@@ -50,7 +50,7 @@ def convert_time(seconds):
     time    %= 60
     seconds  = round(time)
     
-    converted = (f" Day(s): {days}, Hour(s): {hours}, Minute(s): {minutes},"
+    converted = (f" Day(s): {days} // Hour(s): {hours} // Minute(s): {minutes} // "
                 f"Second(s): {seconds}")
 
     return converted
